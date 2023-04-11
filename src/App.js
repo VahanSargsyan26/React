@@ -8,6 +8,7 @@ function App() {
   const [val, setValue] = useState("");
   const [count, setItem] = useState(0);
   const [textID, setId] = useState("");
+  const [rangeValue, setVal] = useState(0);
   <div>{textID}</div>
   return (
     <div className="App">
@@ -57,6 +58,13 @@ function App() {
       }}>Generate ID</button>
 
       <div>{textID}</div>
+
+      <label>
+        <p>{rangeValue}</p>
+        <input type='range' name="volume" min="0" max="100" onChange={(evt) => {
+          setVal(evt.target.value)
+        }}/>
+      </label>
 
     </div>
   )
