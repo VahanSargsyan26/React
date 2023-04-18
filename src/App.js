@@ -5,6 +5,7 @@ import Id from './user';
 import { useState } from 'react';
 import Replace from './replace';
 import EmailForm from './validation';
+import WordSearch from './search'
 
 function App() {
   const [text, setText] = useState("world")
@@ -88,7 +89,10 @@ function App() {
       <h2>Hello {text}</h2>
 
       <EmailForm />
+      <WordSearch />
     </div>
+
+      
   )
 }
 
